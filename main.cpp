@@ -21,6 +21,9 @@ int main(int argc, char** argv) {
     cv::absdiff(lastframe, frame, difframe);
     cv::imshow("Source", frame);
     cv::imshow("Difference", difframe);
+    if (cv::waitKey(10) == 'q') {
+      break;
+    }
   }
   return 0;
 }
